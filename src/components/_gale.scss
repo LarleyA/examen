@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .columna {
+    float:left;
+    width: 25%;
+    padding-right: 5px;
+  }
+  
+  .fila::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  img {
+    /* Para que sea responsiva */
+    width: 100%;
+  }
+  .fila{
+      margin-top: 30px;
+      
+  }

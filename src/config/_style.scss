@@ -1,0 +1,109 @@
+//variables larley
+$color-principal: rgb(167, 64, 124);
+$color-letra:rgb(166, 61, 78);
+$color-fondo1:rgb(223, 157, 160);
+$color-fondo2:rgb(155, 112, 119);
+$color-fondo3:rgb(61, 50, 65);
+$color-claro:white;
+$tamano-cajas:padding 15 px;
+$color-principal2:rgb(44, 30, 39);
+
+
+body1 {
+    background: $color-principal;
+    color: $color-letra;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {height: 100%;}
+
+body {
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+  }
+
+  .grid-container > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .header {
+    grid-area: header;
+    background-color: #85aedd;
+  }
+  
+  .navbar {
+    grid-area: navbar;
+    background-color: #afd6af;
+    padding:200px;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #fdcfcf; 
+  }
+  
+  .main {
+    grid-area: main;
+    background-color: $color-principal; 
+  
+    
+  }
+  
+  .info {
+    grid-area: info;
+    background-color: $color-fondo2;
+  }
+
+  .galeria {
+    grid-area: galeria;
+    background-color: $color-fondo1;
+    height: 620px;
+  }
+  .main2 {
+    grid-area: main2;
+    background-color: $color-fondo1;
+  }
+  .footer {
+    grid-area: footer;
+    background-color: $color-fondo2;
+    margin-top: -80px;
+  }
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "sidebar"
+    "main"
+    "info"
+    "galeria"
+    "main2"
+    "footer";
+
+}  
+
+@media (min-width:600px) {
+    .grid-container {
+        grid-template-columns: 50% auto;
+        grid-template-rows: 100px 50px auto 100px;    
+        grid-template: 
+        "header  navbar" 400px
+        "sidebar main" 400px
+        "info galeria" 700px
+        "main2   footer" 400px;
+    }
+}
